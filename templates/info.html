@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<center>
+  <p class="font-weight-lighter" style="color:white;font-size:25px;">The List of People's Blood Group</p><br>
+<table class="table" border=1 bordercolor="black">
+  <thead class="thead-dark">
+  <tr>
+    <th><b>S.No</b></th>
+    <th><b>Name</b></th>
+    <th><b>Blood Group</b></th>
+  </tr>
+  </thead>
+  {% for i in info %}
+  <tr>
+    <th class="bg-success">{{info.index(i)+1}}</th>
+    <td class="bg-danger">{{i.name}}</td>
+    <td class="bg-warning">{{i.blood_group}}</td>
+  </tr>
+  {% endfor %}
+</table>
+</center>
+
+{% endblock %}
